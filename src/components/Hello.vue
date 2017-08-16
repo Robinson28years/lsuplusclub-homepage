@@ -47,7 +47,7 @@
               <div class="row">
                 <div class="col-md-10 col-md-offset-2">
                   <div class="block">
-                    <h1 class="animated fadeInUp">一些伟大的思想&#35; <br> 都有一个微不足道的开始</h1>
+                    <h1 class="animated fadeInUp">一些伟大的行动和思想&#35; <br> 都有一个微不足道的开始</h1>
                     <p class="animated fadeInUp"> LSU·Plus·Club&hearts;</br> 丽水学院互联网+俱乐部</p>
                   </div>
                 </div>
