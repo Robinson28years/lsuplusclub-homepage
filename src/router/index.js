@@ -8,8 +8,21 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+        component: require('@/components/homepage'),
+        children: [
+            {
+              path: '',
+                redirect: 'home',
+            },
+            {
+              path: 'home',
+                component: require('@/components/home'),
+            },
+            {
+              path: '2',
+                component: require('@/components/test2'),
+            }
+        ]
     }
   ]
 })
