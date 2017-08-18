@@ -20,8 +20,8 @@
                                         <span class="icon-bar"></span>
                                     </button>
                                     <a class="navbar-brand" href="index.html">
-                                        <h2>LSU·Plus</h2>
-                                        <!-- <img src="../assets/pluss.png"  height="60" width="60" alt="Logo"> -->
+                                        <!--<h2>LSU·Plus</h2>-->
+                                         <img src="../assets/pluss.png"  height="60" width="60" alt="Logo">
                                     </a>
                                 </div>
                                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -32,9 +32,43 @@
                                         <li><router-link to="/3">图书馆</router-link></li>
                                         <li><router-link to="/4">兴趣小组</router-link></li>
                                         <li><router-link to="/5">API</router-link></li>
+                                        <li ><a href="#">||</a></li>
+                                        <li ><router-link to="/login">登录</router-link></li>
+                                        <li ><router-link to="/register">注册</router-link></li>
+                                        <!--<li>-->
+                                            <!--<img src="../assets/logo.png" style="height: 50px;width: 50px" class="media-object img-circle">-->
+                                        <!--</li>-->
+                                        <!--<li class="dropdown">-->
+                                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                                                <!--陈斌斌	<strong class="caret"></strong></a>-->
+                                            <!--<ul class="dropdown-menu">-->
+                                                <!--<li>-->
+                                                    <!--<a href="#">个人中心</a>-->
+                                                <!--</li>-->
+                                                <!--<li>-->
+                                                    <!--<a href="#">修改密码</a>-->
+                                                <!--</li>-->
+                                                <!--<li>-->
+                                                    <!--<a href="#">修改头像</a>-->
+                                                <!--</li>-->
+
+                                                <!--&lt;!&ndash;@if (Auth::user()->admin==1)&ndash;&gt;-->
+
+
+                                                <!--<li> <a href="/vip">后台管理</a></li>-->
+                                                <!--&lt;!&ndash;@endif&ndash;&gt;-->
+                                                <!--<li class="divider">-->
+                                                <!--</li>-->
+                                                <!--<li>-->
+                                                    <!--<a href="#">注销</a>-->
+                                                <!--</li>-->
+                                            <!--</ul>-->
+                                        <!--</li>-->
                                     </ul>
+
                                 </div><!-- /.navbar-collapse -->
                             </div><!-- /.container-fluid -->
+
                         </nav>
                     </div>
                 </div>
@@ -57,5 +91,20 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+    .avatar {
+        width: 30px;
+        border-radius: 50%;
+    }
+    /*.dropdown-menu>li>a {*/
+        /*display: block;*/
+        /*padding: 3px 20px;*/
+        /*clear: both;*/
+        /*font-weight: 400;*/
+        /*line-height: 1.72222;*/
+        /*color: #fff;*/
+        /*white-space: nowrap;*/
+    /*}*/
+    .dropdown-menu {
+        left: 0;
+    }
 </style>
