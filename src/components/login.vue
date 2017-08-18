@@ -3,7 +3,7 @@
 <div id="particles-js"></div>
  <div class="container">
       <div class="row">
-          <div class="col-md-8 col-md-offset-2" style="margin-top: 20%">
+          <div class="col-md-6 col-md-offset-3" style="margin-top: 20%">
   <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
   <el-form-item
     prop="email"
@@ -16,7 +16,7 @@
     <el-input v-model="ruleForm2.email"></el-input>
   </el-form-item>
 
-    <el-form-item label="密码" prop="pass" required=true>
+    <el-form-item label="密码" prop="pass" required>
     <el-input type="password" v-model="ruleForm2.pass" auto-complete="off"></el-input>
   </el-form-item>
 
@@ -166,12 +166,9 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-			  axios.post('/acm/store', {
-                   name : this.ruleForm2.name,
-                   studentid: this.ruleForm2.studentid,
-				   college : this.ruleForm2.college,
-                   grades: this.ruleForm2.grades,
-				   phone : this.ruleForm2.phone
+			  axios.post('/api/login', {
+                   email : this.ruleForm2.email,
+                   password : this.ruleForm2.pass,
                })
                    .then(function (response) {
                        console.log(response);

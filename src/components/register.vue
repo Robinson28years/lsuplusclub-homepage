@@ -3,7 +3,7 @@
 <div id="particles-js"></div>
  <div class="container">
       <div class="row">
-          <div class="col-md-8 col-md-offset-2" style="margin-top: 10%">
+          <div class="col-md-6 col-md-offset-3" style="margin-top: 10%">
   <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
   <el-form-item
     prop="email"
@@ -15,22 +15,22 @@
   >
     <el-input v-model="ruleForm2.email"></el-input>
   </el-form-item>
-  <el-form-item label="姓名" prop="name" required=true>
+  <el-form-item label="姓名" prop="name" required>
     <el-input v-model.number="ruleForm2.name"></el-input>
   </el-form-item>
-  <el-form-item label="长学号" prop="studentid" required=true>
+  <el-form-item label="长学号" prop="studentid" required>
     <el-input v-model="ruleForm2.studentid"></el-input>
   </el-form-item>
-  <el-form-item label="班级" prop="grades" required=true>
+  <el-form-item label="班级" prop="grades" required>
     <el-input v-model="ruleForm2.grades"></el-input>
   </el-form-item>
-  <el-form-item label="联系方式(长号)" prop="phone" required=true>
+  <el-form-item label="联系方式(长号)" prop="phone" required>
     <el-input v-model="ruleForm2.phone"></el-input>
   </el-form-item>
-    <el-form-item label="密码" prop="pass" required=true>
+    <el-form-item label="密码" prop="pass" required>
     <el-input type="password" v-model="ruleForm2.pass" auto-complete="off"></el-input>
   </el-form-item>
-  <el-form-item label="确认密码" prop="checkPass" required=true>
+  <el-form-item label="确认密码" prop="checkPass" required>
     <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off"></el-input>
   </el-form-item>
   <el-form-item>

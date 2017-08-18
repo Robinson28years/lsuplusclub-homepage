@@ -3,13 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
-// import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-// import App from './App.vue'
+import axios from 'axios'
 
-
+window.axios = require('axios')
 
 Vue.use(ElementUI)
 
