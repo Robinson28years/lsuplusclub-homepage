@@ -174,6 +174,9 @@
                         let k = response.data.result;
                         if(k!=null) {
                           localStorage.setItem('jwt',k);
+                          axios.post('api/get_user_details', {
+
+                          })
                           this.open3();
                         }
 

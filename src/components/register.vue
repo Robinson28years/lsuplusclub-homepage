@@ -177,6 +177,8 @@
         });
       },
       submitForm(formName) {
+		  let y =localStorage.getItem('jwt');
+		  console.log(y);
         this.$refs[formName].validate((valid) => {
           if (valid) {
 			  axios.post('/api/register', {

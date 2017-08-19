@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-default/index.css'
 import axios from 'axios'
 
 window.axios = require('axios')
-
+window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('jwt');
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
