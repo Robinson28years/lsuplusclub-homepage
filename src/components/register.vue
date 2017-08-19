@@ -179,15 +179,16 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-			  axios.post('/acm/store', {
+			  axios.post('/api/register', {
                    name : this.ruleForm2.name,
+                   email : this.ruleForm2.email,
                    studentid: this.ruleForm2.studentid,
-				   college : this.ruleForm2.college,
                    grades: this.ruleForm2.grades,
-				   phone : this.ruleForm2.phone
+				   phone : this.ruleForm2.phone,
+                   password : this.ruleForm2.pass
                })
                    .then(function (response) {
-                       console.log(response);
+                       console.log(response.result);
                    })
                    .catch(function (error) {
                        console.log(error);

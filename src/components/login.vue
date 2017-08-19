@@ -170,13 +170,18 @@
                    email : this.ruleForm2.email,
                    password : this.ruleForm2.pass,
                })
-                   .then(function (response) {
-                       console.log(response);
+                   .then(response => {
+                        let k = response.data.result;
+                        if(k!=null) {
+                          localStorage.setItem('jwt',k);
+                          this.open3();
+                        }
+
                    })
                    .catch(function (error) {
                        console.log(error);
                    });
-				   this.open3();
+//				   this.open3();
           } else {
             console.log('error submit!!');
             return false;
