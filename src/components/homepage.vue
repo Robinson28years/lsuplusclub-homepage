@@ -33,37 +33,41 @@
                                         <li><router-link to="/4">兴趣小组</router-link></li>
                                         <li><router-link to="/5">API</router-link></li>
                                         <li ><a href="#">||</a></li>
-                                        <li ><router-link to="/login">登录</router-link></li>
-                                        <li ><router-link to="/register">注册</router-link></li>
-                                        <!--<li>-->
-                                            <!--<img src="../assets/logo.png" style="height: 50px;width: 50px" class="media-object img-circle">-->
-                                        <!--</li>-->
-                                        <!--<li class="dropdown">-->
-                                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
-                                                <!--陈斌斌	<strong class="caret"></strong></a>-->
-                                            <!--<ul class="dropdown-menu">-->
-                                                <!--<li>-->
-                                                    <!--<a href="#">个人中心</a>-->
-                                                <!--</li>-->
-                                                <!--<li>-->
-                                                    <!--<a href="#">修改密码</a>-->
-                                                <!--</li>-->
-                                                <!--<li>-->
-                                                    <!--<a href="#">修改头像</a>-->
-                                                <!--</li>-->
+                                        <template v-if="noUser">
+                                            <li ><router-link to="/login">登录</router-link></li>
+                                            <li ><router-link to="/register">注册</router-link></li>
+                                        </template>
+                                        <template v-else>
+                                        <li>
+                                            <img  :src="user.avatar" style="height: 50px;width: 50px" class="media-object img-circle">
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                {{user.name}}	<strong class="caret"></strong></a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#">个人中心</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">修改密码</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">修改头像</a>
+                                                </li>
 
-                                                <!--&lt;!&ndash;@if (Auth::user()->admin==1)&ndash;&gt;-->
+                                                <!--@if (Auth::user()->admin==1)-->
 
 
-                                                <!--<li> <a href="/vip">后台管理</a></li>-->
-                                                <!--&lt;!&ndash;@endif&ndash;&gt;-->
-                                                <!--<li class="divider">-->
-                                                <!--</li>-->
-                                                <!--<li>-->
-                                                    <!--<a href="#">注销</a>-->
-                                                <!--</li>-->
-                                            <!--</ul>-->
-                                        <!--</li>-->
+                                                <li> <a href="/vip">后台管理</a></li>
+                                                <!--@endif-->
+                                                <li class="divider">
+                                                </li>
+                                                <li>
+                                                    <a href="#">注销</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        </template>
                                     </ul>
 
                                 </div><!-- /.navbar-collapse -->
@@ -81,9 +85,20 @@
 <script>
     export default {
         name: 'hello',
+        created() {
+          let token = localStorage.getItem('jwt');
+          if (token != null){
+            this.noUser = false;
+            this.user = localStorage.getItem('user');
+            this.user = JSON.parse(this.user);
+            console.log(this.user);
+          }
+        },
         data () {
             return {
-                msg: 'Welcome to Your Vue.js App'
+                msg: 'Welcome to Your Vue.js App',
+                noUser: true,
+                user : null,
             }
         }
     }

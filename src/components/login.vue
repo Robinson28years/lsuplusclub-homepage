@@ -174,8 +174,13 @@
                         let k = response.data.result;
                         if(k!=null) {
                           localStorage.setItem('jwt',k);
+                          window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('jwt');
                           axios.post('api/get_user_details', {
-
+                          }).then(response => {
+//                            console.log(response.data.result)
+                            let user = response.data.result;
+                            user = JSON.stringify(user);
+                            localStorage.setItem('user', user);
                           })
                           this.open3();
                         }
