@@ -86,7 +86,7 @@
 <script>
     export default {
         name: 'hello',
-        created() {
+      mounted() {
           let token = localStorage.getItem('jwt');
           if (token != null){
             this.noUser = false;

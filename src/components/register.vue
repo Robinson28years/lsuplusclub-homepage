@@ -172,7 +172,7 @@
 		open3() {
         this.$notify({
           title: '成功',
-          message: '这是一条成功的提示消息',
+          message: '注册成功',
           type: 'success'
         });
       },
@@ -189,8 +189,25 @@
 				   phone : this.ruleForm2.phone,
                    password : this.ruleForm2.pass
                })
-                   .then(function (response) {
-                       console.log(response.result);
+                   .then(response => {
+                     let k = response.data.result;
+                     if(k!=null) {
+                       localStorage.setItem('jwt',k);
+                       window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('jwt');
+                       axios.post('api/get_user_details', {
+                       }).then(response => {
+//                            console.log(response.data.result)
+                         let user = response.data.result;
+                         user = JSON.stringify(user);
+                         localStorage.setItem('user', user);
+                         if(localStorage.getItem('user') != null) {
+                           console.log("222222222");
+                           window.location.href = '/';
+//                              this.$router.go('/home');
+                         }
+                       })
+                       this.open3();
+                     }
                    })
                    .catch(function (error) {
                        console.log(error);

@@ -159,7 +159,7 @@
 		open3() {
         this.$notify({
           title: '成功',
-          message: '这是一条成功的提示消息',
+          message: '登录成功',
           type: 'success'
         });
       },
@@ -183,8 +183,8 @@
                             localStorage.setItem('user', user);
                             if(localStorage.getItem('user') != null) {
                               console.log("222222222");
-                              window.location.href = '/home';
-//                              this.$router.go('/');
+                              window.location.href = '/';
+//                              this.$router.go('/home');
                             }
                           })
                           this.open3();
