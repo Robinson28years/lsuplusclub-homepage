@@ -17,6 +17,7 @@ export default new Router({
         },
         {
           path: 'home',
+          // beforeEnter: LoginCheck,
           component: require('@/components/home'),
         },
         {
@@ -35,7 +36,16 @@ export default new Router({
     }
   ]
 })
+function LoginCheck(to, from, next) {
+  console.log(from.path);
+  if(from.path == '/login') {
+    console.log(localStorage.getItem('user'));
+  }
+  next();
+}
 function TestUser (to, from, next) {
+  console.log("111111111111111111");
+  console.log(to);
     let token = localStorage.getItem('jwt');
     if (token != null) {
       axios.post('/api/refresh', {
@@ -49,8 +59,7 @@ function TestUser (to, from, next) {
             localStorage.setItem('user', user);
           })
       }).catch(function (error) {
-        localStorage.setItem('jwt',null);
-        localStorage.setItem('user',null);
+        localStorage.clear();
       });
     }
     // console.log('1111');

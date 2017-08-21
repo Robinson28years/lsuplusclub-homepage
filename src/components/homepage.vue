@@ -58,12 +58,13 @@
                                                 <!--@if (Auth::user()->admin==1)-->
 
 
-                                                <li> <a href="/vip">后台管理</a></li>
+                                                <li v-if="admin"> <a href="/vip">后台管理</a></li>
                                                 <!--@endif-->
                                                 <li class="divider">
                                                 </li>
                                                 <li>
-                                                    <a href="#">注销</a>
+                                                    <a v-on:click.once="logout">注销</a>
+                                                    <!--<a @click="logout">注销</a>-->
                                                 </li>
                                             </ul>
                                         </li>
@@ -91,7 +92,15 @@
             this.noUser = false;
             this.user = localStorage.getItem('user');
             this.user = JSON.parse(this.user);
+            if(this.user.admin == 1) this.admin = true;
             console.log(this.user);
+          }
+        },
+        methods : {
+          logout : function () {
+            localStorage.clear();
+            this.noUser = true;
+            this.$router.push('/home');
           }
         },
         data () {
@@ -99,6 +108,7 @@
                 msg: 'Welcome to Your Vue.js App',
                 noUser: true,
                 user : null,
+                admin : false,
             }
         }
     }

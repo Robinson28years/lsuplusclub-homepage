@@ -181,15 +181,19 @@
                             let user = response.data.result;
                             user = JSON.stringify(user);
                             localStorage.setItem('user', user);
+                            if(localStorage.getItem('user') != null) {
+                              console.log("222222222");
+                              window.location.href = '/home';
+//                              this.$router.go('/');
+                            }
                           })
                           this.open3();
                         }
-
                    })
                    .catch(function (error) {
                        console.log(error);
                    });
-//				   this.open3();
+
           } else {
             console.log('error submit!!');
             return false;
