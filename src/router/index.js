@@ -21,8 +21,8 @@ export default new Router({
           component: require('@/components/home'),
         },
         {
-          path: '2',
-          component: require('@/components/test2'),
+          path: 'forum',
+          component: require('@/components/forum'),
         },
         {
           path: 'login',

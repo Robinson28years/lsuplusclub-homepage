@@ -28,7 +28,7 @@
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav navbar-right">
                                         <li><router-link to="/home">首页</router-link></li>
-                                        <li><router-link to="/2">论坛</router-link></li>
+                                        <li><router-link to="/forum">论坛</router-link></li>
                                         <li><router-link to="/3">图书馆</router-link></li>
                                         <li><router-link to="/4">兴趣小组</router-link></li>
                                         <li><router-link to="/5">API</router-link></li>

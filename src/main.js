@@ -7,17 +7,19 @@ import VueRouter from 'vue-router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import axios from 'axios'
+import VueMarkdown from 'vue-markdown'
 
 window.axios = require('axios')
 window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('jwt');
 Vue.use(ElementUI)
 Vue.use(VueRouter)
-
+Vue.use(VueMarkdown);
 Vue.config.productionTip = false
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App  }
 })
