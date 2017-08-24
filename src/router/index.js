@@ -22,7 +22,7 @@ export default new Router({
         },
         {
           path: 'forum',
-          component: require('@/components/forum'),
+          component: require('@/components/forum/index'),
         },
         {
           path: 'login',
