@@ -34,7 +34,7 @@
             <div v-if="loading2 != true">
                 <div class="panel panel-info"   v-for="discuss in discussions">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><a href="#">{{discuss.title}}</a></h3>
+                        <h3 class="panel-title"><router-link to="forum/2">{{discuss.title}}</router-link></h3>
                     </div>
                     <div class="panel-body">
                         <div class="media">

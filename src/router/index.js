@@ -10,29 +10,33 @@ export default new Router({
       path: '/',
       component: require('@/components/homepage'),
       beforeEnter: TestUser,
-      children: [
-        {
-          path: '',
-          redirect: 'home',
-        },
-        {
-          path: 'home',
-          // beforeEnter: LoginCheck,
-          component: require('@/components/home'),
-        },
-        {
-          path: 'forum',
-          component: require('@/components/forum/index'),
-        },
-        {
-          path: 'login',
-          component: require('@/components/login'),
-        },
-        {
-          path: 'register',
-          component: require('@/components/register'),
-        }
-      ]
+        children: [
+            {
+                path: '',
+                redirect: 'home',
+            },
+            {
+                path: 'home',
+                // beforeEnter: LoginCheck,
+                component: require('@/components/home'),
+            },
+            {
+                path: 'forum',
+                component: require('@/components/forum/index'),
+            },
+            {
+                path: 'forum/:id',
+                component: require('@/components/forum/forum_detail'),
+            },
+            {
+                path: 'login',
+                component: require('@/components/login'),
+            },
+            {
+                path: 'register',
+                component: require('@/components/register'),
+            }
+        ]
     }
   ]
 })
