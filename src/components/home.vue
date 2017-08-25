@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div>
         <!-- Slider Start -->
         <section id="slider">
             <div class="container">
@@ -40,9 +40,12 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-6">
                         <h2>WE BELIEVE IN GREAT IDEAS</h2>
-                        <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                        <p>
+                            Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                        <p>
+                            Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                        <p>
+                            Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                         <a href="work.html" class="btn btn-view-works">View Works</a>
                     </div>
                 </div>
@@ -55,7 +58,8 @@
                 <div class="row">
                     <div class="section-title">
                         <h2>Our Services</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
                     </div>
                 </div>
                 <div class="row ">
@@ -63,56 +67,64 @@
                         <div class="service-item">
                             <i class="icon ion-coffee"></i>
                             <h4>Branding</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="service-item">
                             <i class="ion-compass"></i>
                             <h4>Web Design</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="service-item">
                             <i class="ion-image"></i>
                             <h4>App Design</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="service-item">
                             <i class="ion-bug"></i>
                             <h4>Start Up</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="service-item">
                             <i class="ion-headphone"></i>
                             <h4>Logo Design</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="service-item">
                             <i class="ion-leaf"></i>
                             <h4>Development</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="service-item">
                             <i class="ion-planet"></i>
                             <h4>Brand Identity</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="service-item">
                             <i class="ion-earth"></i>
                             <h4>Brand Identity</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
                         </div>
                     </div>
                 </div>
@@ -125,8 +137,9 @@
                     <div class="col-md-12">
                         <div class="block">
                             <h2>We design delightful digital experiences.</h2>
-                            <p>Read more about what we do and our philosophy of design. Judge for yourself The work and results we’ve achieved for other clients, and meet our highly experienced Team who just love to design.</p>
-                            <a class="btn btn-default btn-call-to-action" href="#" >Tell Us Your Story</a>
+                            <p>
+                                Read more about what we do and our philosophy of design. Judge for yourself The work and results we’ve achieved for other clients, and meet our highly experienced Team who just love to design.</p>
+                            <a class="btn btn-default btn-call-to-action" href="#">Tell Us Your Story</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +151,8 @@
                 <div class="row">
                     <div class="section-title text-center">
                         <h2>Fun Facts About Us</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
                     </div>
                 </div>
                 <div class="row">
@@ -182,7 +196,8 @@
                             <div id="testimonial-slider" class="owl-carousel">
                                 <div>
                                     <img src="../assets/img/cotation.png" alt="IMG">
-                                    <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                                    <p>
+                                        "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
                                     <div class="user">
                                         <img src="../assets/img/item-img1.jpg" alt="Pepole">
                                         <p><span>Rose Ray</span> CEO</p>
@@ -190,7 +205,8 @@
                                 </div>
                                 <div>
                                     <img src="../assets/img/cotation.png" alt="IMG">
-                                    <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                                    <p>
+                                        "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
                                     <div class="user">
                                         <img src="../assets/img/item-img1.jpg" alt="Pepole">
                                         <p><span>Rose Ray</span> CEO</p>
@@ -198,7 +214,8 @@
                                 </div>
                                 <div>
                                     <img src="../assets/img/cotation.png" alt="IMG">
-                                    <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                                    <p>
+                                        "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
                                     <div class="user">
                                         <img src="../assets/img/item-img1.jpg" alt="Pepole">
                                         <p><span>Rose Ray</span> CEO</p>
@@ -206,7 +223,8 @@
                                 </div>
                                 <div>
                                     <img src="../assets/img/cotation.png" alt="IMG">
-                                    <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                                    <p>
+                                        "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
                                     <div class="user">
                                         <img src="../assets/img/item-img1.jpg" alt="Pepole">
                                         <p><span>Rose Ray</span> CEO</p>
@@ -218,13 +236,6 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
 
 
         <!-- footer Start -->

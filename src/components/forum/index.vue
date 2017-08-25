@@ -10,7 +10,7 @@
                 <el-tab-pane label="日常" name="third"></el-tab-pane>
             </el-tabs>
             <!--缓冲-->
-            <div class="panel panel-info" v-loading="loading2" v-if="loading2" v-for="n in 6" >
+            <div class="panel panel-info" v-loading="loading2" v-if="loading2" v-for="n in 6">
                 <div class="panel-heading">
                     <h3 class="panel-title">213123</h3>
                 </div>
@@ -32,9 +32,11 @@
                 <div class="panel-footer">Panel footer</div>
             </div>
             <div v-if="loading2 != true">
-                <div class="panel panel-info"   v-for="discuss in discussions">
+                <div class="panel panel-info" v-for="discuss in discussions">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><router-link to="forum/2">{{discuss.title}}</router-link></h3>
+                        <h3 class="panel-title">
+                            <router-link to="forum/2">{{discuss.title}}</router-link>
+                        </h3>
                     </div>
                     <div class="panel-body">
                         <div class="media">
@@ -74,63 +76,64 @@
 </template>
 
 <script>
-    import VueMarkdown from 'vue-markdown'
-    export default {
-        components: {
-            VueMarkdown,
-        },
-        created() {
-            axios.get('/api/topics')
-                .then(response => {
-//                  console.log(response.data)
-                    let k = response.data.data;
-                    let i =0;
-                    while (k[i]!=null) {
-                        this.discussions.push(k[i]);
-                        i++;
-                    }
-                    this.total = response.data.total;
-                    this.page_size = response.data.per_page;
+  import VueMarkdown from 'vue-markdown'
 
-                    this.loading2 = false;
+  export default {
+    components: {
+      VueMarkdown,
+    },
+    created() {
+      axios.get('/api/topics')
+        .then(response => {
+//                  console.log(response.data)
+          let k = response.data.data;
+          let i = 0;
+          while (k[i] != null) {
+            this.discussions.push(k[i]);
+            i++;
+          }
+          this.total = response.data.total;
+          this.page_size = response.data.per_page;
+
+          this.loading2 = false;
 //                  console.log(this.discussions[2]);
-                })
-        },
-        data() {
-            return {
-                activeName: 'first',
-                discussions: [],
-                loading2 : true,
-                currentPage3: 1,
-                total: 200,
-                page_size: 10,
-            };
-        },
-        methods: {
-            handleClick(tab, event) {
-                console.log(tab, event);
-            },
-            handleSizeChange(val) {
-                console.log(`每页 ${val} 条`);
-            },
-            handleCurrentChange(val) {
-                this.loading2 = true;
-                axios.get('api/topics?page='+ val)
-                    .then(response => {
-                        this.discussions = null;
-                        this.discussions = [];
-                        let k = response.data.data;
-                        let i =0;
-                        while (k[i]!=null) {
-                            this.discussions.push(k[i]);
-                            i++;
-                        }
-                        this.loading2 = false;
-                    })
-                console.log(`当前页: ${val}`);
+        })
+    },
+    data() {
+      return {
+        activeName: 'first',
+        discussions: [],
+        loading2: true,
+        currentPage3: 1,
+        total: 200,
+        page_size: 10,
+      };
+    },
+    methods: {
+      handleClick(tab, event) {
+        console.log(tab, event);
+      },
+      handleSizeChange(val) {
+        console.log(`每页 ${val} 条`);
+      },
+      handleCurrentChange(val) {
+        this.loading2 = true;
+        axios.get('api/topics?page=' + val)
+          .then(response => {
+            this.discussions = null;
+            this.discussions = [];
+            let k = response.data.data;
+            let i = 0;
+            while (k[i] != null) {
+              this.discussions.push(k[i]);
+              i++;
             }
-        }
-    };
+            this.loading2 = false;
+          })
+        console.log(`当前页: ${val}`);
+      }
+    }
+  };
 </script>
 
 <style>
