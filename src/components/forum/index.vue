@@ -32,10 +32,10 @@
                 <div class="panel-footer">Panel footer</div>
             </div>
             <div v-if="loading2 != true">
-                <div class="panel panel-info" v-for="discuss in discussions">
+                <div class="panel panel-info" v-for="discussion in discussions">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            <router-link to="forum/2">{{discuss.title}}</router-link>
+                            <router-link :to="{path: '/forum/' + discussion.id}">{{discussion.title}}</router-link>
                         </h3>
                     </div>
                     <div class="panel-body">
@@ -49,12 +49,12 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <!--{{discuss.body}}-->
-                                <vue-markdown>{{discuss.body}}</vue-markdown>
+                                <!--{{discussion.body}}-->
+                                <vue-markdown>{{discussion.body}}</vue-markdown>
                             </div>
                         </div>
                     </div>
-                    <div class="panel-footer"><a href="#">{{discuss.user.name}}</a> 创建于 {{discuss.created_at}}</div>
+                    <div class="panel-footer"><a href="#">{{discussion.user.name}}</a> 创建于 {{discussion.created_at}}</div>
                 </div>
             </div>
             <div class="block" style="margin-bottom: 10%; margin-top: 5%">
