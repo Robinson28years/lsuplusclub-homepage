@@ -42,22 +42,25 @@
                         </div>
                         <!--@if (isset(discussion.comments))-->
                         <!--@foreach(discussion.comments as comment)-->
+                        <template  v-for="comment in comments">
                         <div class="media " style="border-top: 2px solid #E4E3E5;margin-top: 3%;margin-bottom: 3%">
                         </div>
-                        <div class="media" v-for="comment in comments">
-                            <!--<template  v-for="comment in comments">-->
+                        <div class="media" >
+
                             <a class="media-left" :href="'/user/'+comment.user.id">
                                 <img :src="comment.user.avatar" style="height: 64px;width: 64px" class="media-object img-circle">
                             </a>
                             <div class="media-body">
                                 <h5 class="media-heading"><a :href="'/user/'+comment.user.id">{{comment.user.name}}</a></h5>
-                                {{comment.body}}
+                                <!--{{comment.body}}-->
+                                <vue-markdown :source="comment.body"></vue-markdown>
                             </div>
                             <div class="pull-right" style="color: #7088A9">
                                 回复于：  {{comment.created_at}}
                             </div>
-                            <!--</template>-->
+
                         </div>
+                        </template>
 
                         <!--@endforeach-->
                         <!--@endif-->
@@ -103,14 +106,14 @@
       let k;
       axios.get('/api/topic/' + this.$route.params.id)
         .then(response => {
-//          console.log(response.data);
+//          console.log(respo nse.data);
           this.discussion = response.data;
           k = response.data.comments;
           let i =0;
           console.log(k);
           while (k[i]!=null) {
             this.comments.push(k[i]);
-            console.log(k[i]);
+//            console.log(k[i]);
             i++;
           }
         })
@@ -118,7 +121,12 @@
     },
     data() {
       return {
-        discussion : [],
+        discussion : {
+          user:{
+            id:'',
+            avatar:'',
+          }
+        },
         comments : [],
       };
     },

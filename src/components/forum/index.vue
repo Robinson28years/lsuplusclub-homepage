@@ -70,6 +70,9 @@
             </div>
 
         </div>
+        <div class="container col-md-1" style="margin-top: 5%">
+            <el-button type="primary">发布帖子</el-button>
+        </div>
 
 
     </div>
@@ -111,7 +114,28 @@
     },
     methods: {
       handleClick(tab, event) {
-        console.log(tab, event);
+        console.log(tab.label, event);
+        let ca="";
+        if (tab.label == "编程") ca = "code";
+        else if (tab.label == "日常") ca = "daily";
+        this.loading2 = true;
+        this.discussions = [];
+        axios.get('/api/topics?categories='+ ca)
+          .then(response => {
+//                  console.log(response.data)
+            let k = response.data.data;
+            let i = 0;
+            while (k[i] != null) {
+              this.discussions.push(k[i]);
+              i++;
+            }
+            this.total = response.data.total;
+            this.page_size = response.data.per_page;
+
+            this.loading2 = false;
+//                  console.log(this.discussions[2]);
+          })
+
       },
       handleSizeChange(val) {
         console.log(`每页 ${val} 条`);
