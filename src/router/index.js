@@ -25,6 +25,10 @@ export default new Router({
           component: require('@/components/forum/index'),
         },
         {
+          path: 'forum/create',
+          component: require('@/components/forum/create'),
+        },
+        {
           path: 'forum/:id',
           component: require('@/components/forum/forum_detail'),
         },

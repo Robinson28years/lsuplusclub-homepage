@@ -15,6 +15,7 @@ Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.use(VueMarkdown);
 Vue.config.productionTip = false
+// var editor = require('./editor.vue');
 
 /* eslint-disable no-new */
 new Vue({

@@ -71,7 +71,7 @@
 
         </div>
         <div class="container col-md-1" style="margin-top: 5%">
-            <el-button type="primary">发布帖子</el-button>
+            <el-button type="primary" @click="create_topic">发布帖子</el-button>
         </div>
 
 
@@ -113,8 +113,11 @@
       };
     },
     methods: {
+      create_topic() {
+        this.$router.push('/forum/create');
+      },
       handleClick(tab, event) {
-        console.log(tab.label, event);
+//        console.log(tab.label, event);
         let ca="";
         if (tab.label == "编程") ca = "code";
         else if (tab.label == "日常") ca = "daily";
@@ -138,7 +141,7 @@
 
       },
       handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
+//        console.log(`每页 ${val} 条`);
       },
       handleCurrentChange(val) {
         this.loading2 = true;
