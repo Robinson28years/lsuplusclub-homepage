@@ -34,7 +34,7 @@
                                             <router-link to="/forum">论坛</router-link>
                                         </li>
                                         <li>
-                                            <router-link to="/3">图书馆</router-link>
+                                            <router-link to="/library">图书馆</router-link>
                                         </li>
                                         <li>
                                             <router-link to="/4">兴趣小组</router-link>

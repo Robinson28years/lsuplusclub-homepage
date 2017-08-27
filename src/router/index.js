@@ -33,6 +33,10 @@ export default new Router({
           component: require('@/components/forum/forum_detail'),
         },
         {
+          path: 'library',
+          component: require('@/components/library/index'),
+        },
+        {
           path: 'login',
           component: require('@/components/login'),
         },
@@ -61,7 +65,7 @@ function TestUser(to, from, next) {
     axios.post('/api/refresh', {}).then(response => {
       localStorage.setItem('jwt', response.data.result);
       window.axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('jwt');
-      axios.post('/api/get_user_details', {}).then(response => {
+      axios.get('/api/get_user_details').then(response => {
         let user = response.data.result;
         user = JSON.stringify(user);
         localStorage.setItem('user', user);
