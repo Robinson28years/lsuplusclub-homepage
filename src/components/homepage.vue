@@ -105,12 +105,12 @@
   export default {
     name: 'hello',
     mounted() {
-      let token = localStorage.getItem('jwt');
+      let token = localStorage.getItem('token');
       if (token != null) {
         this.noUser = false;
         this.user = localStorage.getItem('user');
         this.user = JSON.parse(this.user);
-        if (this.user.admin == 1) this.admin = true;
+        if (this.user.role == "admin") this.admin = true;
         console.log(this.user);
       }
     },

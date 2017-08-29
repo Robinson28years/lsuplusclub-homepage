@@ -177,7 +177,7 @@
         });
       },
       submitForm(formName) {
-		  let y =localStorage.getItem('jwt');
+		  let y =localStorage.getItem('token');
 		  console.log(y);
         this.$refs[formName].validate((valid) => {
           if (valid) {
@@ -192,8 +192,8 @@
                    .then(response => {
                      let k = response.data.result;
                      if(k!=null) {
-                       localStorage.setItem('jwt',k);
-                       window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('jwt');
+                       localStorage.setItem('token',k);
+                       window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('token');
                        axios.post('api/get_user_details', {
                        }).then(response => {
 //                            console.log(response.data.result)
