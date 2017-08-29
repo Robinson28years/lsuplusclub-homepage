@@ -10,7 +10,7 @@ import axios from 'axios'
 import VueMarkdown from 'vue-markdown'
 
 window.axios = require('axios')
-window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('jwt');
+window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('token');
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.use(VueMarkdown);

@@ -60,11 +60,11 @@ function LoginCheck(to, from, next) {
 function TestUser(to, from, next) {
   console.log("111111111111111111");
   console.log(to);
-  let token = localStorage.getItem('jwt');
+  let token = localStorage.getItem('token');
   if (token != null) {
     axios.post('/api/refresh', {}).then(response => {
-      localStorage.setItem('jwt', response.data.result);
-      window.axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('jwt');
+      localStorage.setItem('token', response.data.result);
+      window.axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
       axios.get('/api/get_user_details').then(response => {
         let user = response.data.result;
         user = JSON.stringify(user);
