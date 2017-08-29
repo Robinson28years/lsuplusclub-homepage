@@ -76,7 +76,7 @@
                                                     <!--@if (Auth::user()->admin==1)-->
 
 
-                                                    <li v-if="admin"><a href="/vip">后台管理</a></li>
+                                                    <li v-if="admin"><a href="/dashboard">后台管理</a></li>
                                                     <!--@endif-->
                                                     <li class="divider">
                                                     </li>
