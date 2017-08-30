@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+// import Hello from '@/components/Hello'
 
 Vue.use(Router)
 
@@ -8,7 +8,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: require('@/components/homepage'),
+      component: require('@/views/nav/homepage'),
       beforeEnter: TestUser,
       children: [
         {
@@ -18,35 +18,35 @@ export default new Router({
         {
           path: 'home',
           // beforeEnter: LoginCheck,
-          component: require('@/components/home'),
+          component: require('@/views/home/home'),
         },
         {
           path: 'forum',
-          component: require('@/components/forum/index'),
+          component: require('@/views/forum/index'),
         },
         {
           path: 'forum/create',
-          component: require('@/components/forum/create'),
+          component: require('@/views/forum/create'),
         },
         {
           path: 'forum/:id',
-          component: require('@/components/forum/forum_detail'),
+          component: require('@/views/forum/forum_detail'),
         },
         {
           path: 'library',
-          component: require('@/components/library/index'),
+          component: require('@/views/library/index'),
         },
         {
           path: 'activities',
-          component: require('@/components/activities/index'),
+          component: require('@/views/activities/index'),
         },
         {
           path: 'login',
-          component: require('@/components/login'),
+          component: require('@/views/user/login'),
         },
         {
           path: 'register',
-          component: require('@/components/register'),
+          component: require('@/views/user/register'),
         }
       ]
     }

@@ -195,38 +195,38 @@
                         <div class="testimonial-carousel">
                             <div id="testimonial-slider" class="owl-carousel">
                                 <div>
-                                    <img src="../assets/img/cotation.png" alt="IMG">
+                                    <img src="../../assets/img/cotation.png" alt="IMG">
                                     <p>
                                         "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
                                     <div class="user">
-                                        <img src="../assets/img/item-img1.jpg" alt="Pepole">
+                                        <img src="../../assets/img/item-img1.jpg" alt="Pepole">
                                         <p><span>Rose Ray</span> CEO</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="../assets/img/cotation.png" alt="IMG">
+                                    <img src="../../assets/img/cotation.png" alt="IMG">
                                     <p>
                                         "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
                                     <div class="user">
-                                        <img src="../assets/img/item-img1.jpg" alt="Pepole">
+                                        <img src="../../assets/img/item-img1.jpg" alt="Pepole">
                                         <p><span>Rose Ray</span> CEO</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="../assets/img/cotation.png" alt="IMG">
+                                    <img src="../../assets/img/cotation.png" alt="IMG">
                                     <p>
                                         "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
                                     <div class="user">
-                                        <img src="../assets/img/item-img1.jpg" alt="Pepole">
+                                        <img src="../../assets/img/item-img1.jpg" alt="Pepole">
                                         <p><span>Rose Ray</span> CEO</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="../assets/img/cotation.png" alt="IMG">
+                                    <img src="../../assets/img/cotation.png" alt="IMG">
                                     <p>
                                         "This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
                                     <div class="user">
-                                        <img src="../assets/img/item-img1.jpg" alt="Pepole">
+                                        <img src="../../assets/img/item-img1.jpg" alt="Pepole">
                                         <p><span>Rose Ray</span> CEO</p>
                                     </div>
                                 </div>
