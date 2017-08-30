@@ -14,8 +14,8 @@
                                     {{ activity.summary }}
                                 </p>
                                 <p>
-                                    <!--<div class="pull-right"></div>-->
-                                    <a class="btn btn-primary" href="#">查看全文</a>
+                                    <a class="btn btn-primary" href="#">报名参加</a>
+                                    <a class="btn" href="#">查看全文</a>
                                 </p>
                             </div>
                         </div>
@@ -57,8 +57,7 @@
     },
     methods: {
 
-      handleCurrentChange(val)
-      {
+      handleCurrentChange(val) {
         axios.get('api/activities?page=' + val)
           .then(response => {
 //            this.activities = null;
@@ -77,6 +76,12 @@
 </script>
 
 <style scoped>
+    .thumbnail {
+        padding: 0;
+        box-shadow: 10px 10px 15px #888888;
+        border-right-width: 0px;
+    }
+
     img {
         width: 100%;
         height: 300px;
