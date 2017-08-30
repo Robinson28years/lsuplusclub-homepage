@@ -25,7 +25,7 @@
 
                             <div class="media">
                                 <!--<h3>{!! str !!}</h3>-->
-                                <vue-markdown :source="discussion.body"></vue-markdown>
+                                <vue-markdown class="markdown" :source="discussion.body"></vue-markdown>
                             </div>
                             <div class="pull-right" style="color: #7088A9">
                                 发布于：  {{discussion.created_at}}
@@ -56,7 +56,7 @@
                                     <h5 class="media-heading"><a
                                             :href="'/user/'+comment.user.id">{{comment.user.name}}</a></h5>
                                     <!--{{comment.body}}-->
-                                    <vue-markdown :source="comment.body"></vue-markdown>
+                                    <vue-markdown class="markdown" :source="comment.body"></vue-markdown>
                                 </div>
                                 <div class="pull-right" style="color: #7088A9">
                                     回复于：  {{comment.created_at}}

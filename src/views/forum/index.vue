@@ -50,7 +50,7 @@
                             </div>
                             <div class="media-body">
                                 <!--{{discussion.body}}-->
-                                <vue-markdown>{{discussion.body}}</vue-markdown>
+                                <vue-markdown class="markdown">{{discussion.body}}</vue-markdown>
                             </div>
                         </div>
                     </div>

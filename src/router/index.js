@@ -41,6 +41,10 @@ export default new Router({
           component: require('@/views/activities/index'),
         },
         {
+          path: 'activities/:id',
+          component: require('@/views/activities/detail'),
+        },
+        {
           path: 'login',
           component: require('@/views/user/login'),
         },

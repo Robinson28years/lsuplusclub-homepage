@@ -12,4 +12,11 @@ export default {
 </script>
 
 <style>
+  @import "assets/scss/markdown.scss";
+  .markdown img{
+    display: block !important;
+    margin: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
 </style>
