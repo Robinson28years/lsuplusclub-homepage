@@ -261,7 +261,8 @@
 </template>
 
 <script>
-
+//  NProgress.start();
+//  NProgress.done();
 </script>
 
 <style>

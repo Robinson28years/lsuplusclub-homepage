@@ -117,6 +117,7 @@
       VueMarkdown,
     },
     created() {
+      NProgress.start();
       this.user = localStorage.getItem('user');
       this.user = JSON.parse(this.user);
       if (this.user != null) this.login = true;
@@ -134,6 +135,7 @@
 //            console.log(k[i]);
             i++;
           }
+          NProgress.done();
         })
 
     },

@@ -125,8 +125,10 @@
 </style>
 
 <script>
+  import NProgress from 'nprogress'
   export default {
     created() {
+      NProgress.start();
       axios.get('api/books')
         .then(response => {
           console.log(response.data);
@@ -139,6 +141,7 @@
           }
           this.total = response.data.total;
           this.page_size = response.data.per_page;
+          NProgress.done();
         })
       if (localStorage.getItem('user') != null) {
         this.userLogin = true;

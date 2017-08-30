@@ -37,6 +37,10 @@ export default new Router({
           component: require('@/components/library/index'),
         },
         {
+          path: 'activities',
+          component: require('@/components/activities/index'),
+        },
+        {
           path: 'login',
           component: require('@/components/login'),
         },

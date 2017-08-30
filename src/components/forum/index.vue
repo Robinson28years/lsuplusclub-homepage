@@ -86,6 +86,7 @@
       VueMarkdown,
     },
     created() {
+      NProgress.start();
       axios.get('/api/topics')
         .then(response => {
 //                  console.log(response.data)
@@ -99,6 +100,7 @@
           this.page_size = response.data.per_page;
 
           this.loading2 = false;
+          NProgress.done();
 //                  console.log(this.discussions[2]);
         })
     },

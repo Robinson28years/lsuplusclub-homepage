@@ -40,7 +40,7 @@
                                             <router-link to="/4">兴趣小组</router-link>
                                         </li>
                                         <li>
-                                            <router-link to="/3">活动</router-link>
+                                            <router-link to="/activities">活动</router-link>
                                         </li>
                                         <li>
                                             <router-link to="/5">API</router-link>
