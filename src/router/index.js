@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Hello from '@/components/Hello'
 
 Vue.use(Router)
 
@@ -19,6 +18,10 @@ export default new Router({
           path: 'home',
           // beforeEnter: LoginCheck,
           component: require('@/views/home/home'),
+        },
+        {
+          path: 'user/:id',
+          component: require('@/views/user/index'),
         },
         {
           path: 'forum',

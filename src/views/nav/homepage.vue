@@ -64,7 +64,7 @@
                                                     {{user.name}}	<strong class="caret"></strong></a>
                                                 <ul class="dropdown-menu">
                                                     <li>
-                                                        <a href="#">个人中心</a>
+                                                        <router-link :to="{path: '/user/' + user.id}">个人中心</router-link>
                                                     </li>
                                                     <li>
                                                         <a href="#">修改密码</a>
