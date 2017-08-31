@@ -40,9 +40,9 @@
                     <li>
                       <router-link to="/activities">活动</router-link>
                     </li>
-                    <li>
+                    <!-- <li>
                       <router-link to="/5">API</router-link>
-                    </li>
+                    </li> -->
                     <li>
                       <a href="#">||</a>
                     </li>

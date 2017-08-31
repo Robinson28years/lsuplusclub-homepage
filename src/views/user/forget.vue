@@ -22,7 +22,7 @@
   </el-form-item>
   <el-form-item label="验证码" required>
     <el-col :span="15">
-      <el-input v-model="form.code" placeholder="验证码 (通过邮件获取)"></el-input>
+      <el-input v-model="form.code" placeholder="验证码 (通过邮件获取)(垃圾邮件里找找)"></el-input>
     </el-col>
 
   </el-form-item>
