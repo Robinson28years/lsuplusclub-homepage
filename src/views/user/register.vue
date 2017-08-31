@@ -190,24 +190,25 @@
                    password : this.ruleForm2.pass
                })
                    .then(response => {
-                     let k = response.data.result;
-                     if(k!=null) {
-                       localStorage.setItem('token',k);
-                       window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('token');
-                       axios.post('api/get_user_details', {
-                       }).then(response => {
-//                            console.log(response.data.result)
-                         let user = response.data.result;
-                         user = JSON.stringify(user);
-                         localStorage.setItem('user', user);
-                         if(localStorage.getItem('user') != null) {
-                           console.log("222222222");
-                           window.location.href = '/';
-//                              this.$router.go('/home');
-                         }
-                       })
+//                      let k = response.data.result;
+//                      if(k!=null) {
+//                        localStorage.setItem('token',k);
+//                        window.axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('token');
+//                        axios.post('api/get_user_details', {
+//                        }).then(response => {
+// //                            console.log(response.data.result)
+//                          let user = response.data.result;
+//                          user = JSON.stringify(user);
+//                          localStorage.setItem('user', user);
+//                          if(localStorage.getItem('user') != null) {
+//                            console.log("222222222");
+//                            window.location.href = '/login';
+// //                              this.$router.go('/home');
+//                          }
+//                        })
+                        this.$router.push('/login');
                        this.open3();
-                     }
+                    //  }
                    })
                    .catch(function (error) {
                        console.log(error);
