@@ -15,51 +15,51 @@
             </h5>
           </div>
           <!-- @if(isset(Auth::user()->id)) @if($user->id==Auth::user()->id)
-              <div class="media-right">
-                <input class="btn btn-success" type="button" onclick="window.location.href='/person/edit'" value="修改">
-              </div>
-              @endif @endif -->
+                <div class="media-right">
+                  <input class="btn btn-success" type="button" onclick="window.location.href='/person/edit'" value="修改">
+                </div>
+                @endif @endif -->
         </div>
       </div>
       <div class="container">
-      <div class="col-md-6">
-        <h3>
-          {{user.name}}最近发布的帖子
-        </h3>
-        <template v-for="discussion in discussions">
-          <div class="media">
-            <div class="media-middle col-md-6 col-md-offset-2">
-              <blockquote>
-                <p>
-                  <router-link :to="{path: '/forum/' + discussion.id}">{{discussion.title}}</router-link>
-                </p>
-                <small>{{discussion.created_at}}</small>
-              </blockquote>
-            </div>
-          </div>
-        </template>
-      </div>
-      <div class="col-md-6">
-        <h3>
-          {{user.name}}最近的回复
-        </h3>
-
-        <template v-for="comment in comments">
-          <div class="media">
-            <div class="media-middle col-md-6 col-md-offset-2">
-              <blockquote>
-                <p>
-                  <router-link :to="{path: '/forum/' + comment.discussion_id}">{{comment.discussion_title}}</router-link>
+        <div class="col-md-6">
+          <h3>
+            {{user.name}}最近发布的帖子
+          </h3>
+          <template v-for="discussion in discussions">
+            <div class="media">
+              <div class="media-middle col-md-6 col-md-offset-2">
+                <blockquote>
                   <p>
-                    <cite>{{comment.body}}</cite>
+                    <router-link :to="{path: '/forum/' + discussion.id}">{{discussion.title}}</router-link>
                   </p>
-                </p>
-                <small>{{comment.created_at}}</small>
-              </blockquote>
+                  <small>{{discussion.created_at}}</small>
+                </blockquote>
+              </div>
             </div>
-          </div>
-        </template>
-      </div>
+          </template>
+        </div>
+        <div class="col-md-6">
+          <h3>
+            {{user.name}}最近的回复
+          </h3>
+
+          <template v-for="comment in comments">
+            <div class="media">
+              <div class="media-middle col-md-6 col-md-offset-2">
+                <blockquote>
+                  <p>
+                    <router-link :to="{path: '/forum/' + comment.discussion_id}">{{comment.discussion_title}}</router-link>
+                    <p>
+                      <cite>{{comment.body}}</cite>
+                    </p>
+                  </p>
+                  <small>{{comment.created_at}}</small>
+                </blockquote>
+              </div>
+            </div>
+          </template>
+        </div>
       </div>
 
     </div>
@@ -68,6 +68,7 @@
 <script>
 export default {
   created() {
+    NProgress.start();
     axios.get('api/user/' + this.$route.params.id)
       .then(res => {
         this.user = res.data.data;
@@ -79,6 +80,7 @@ export default {
     axios.get('api/user/' + this.$route.params.id + '/comments')
       .then(res => {
         this.comments = res.data.data.data;
+        NProgress.done();
       })
   },
   data() {

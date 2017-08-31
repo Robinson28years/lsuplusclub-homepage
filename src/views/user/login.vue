@@ -168,6 +168,7 @@ export default {
       });
     },
     submitForm(formName) {
+      NProgress.start();
       this.$refs[formName].validate((valid) => {
         if (valid) {
           axios.post('/api/login', {
@@ -188,6 +189,7 @@ export default {
                   localStorage.setItem('user', user);
                   if (localStorage.getItem('user') != null) {
                     console.log("222222222");
+                    NProgress.done();
                     window.location.href = '/';
                     //                              this.$router.go('/home');
                   }

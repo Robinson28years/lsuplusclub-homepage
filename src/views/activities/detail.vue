@@ -20,9 +20,11 @@
       VueMarkdown,
     },
     mounted() {
+      NProgress.start();
       axios.get('/api/activities/' + this.$route.params.id)
         .then(res => {
           this.activity = res.data.data;
+          NProgress.done();
         })
     },
     data() {

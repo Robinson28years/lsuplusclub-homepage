@@ -153,6 +153,7 @@ export default {
       console.log(tab, event);
     },
     submit() {
+      NProgress.start();
       this.wait = true;
       axios.post('api/comments', {
         discussion_id: this.$route.params.id,
@@ -162,6 +163,7 @@ export default {
         this.comments.push(response.data.data);
         this.textarea = null;
         this.wait = false;
+        NProgress.done();
       })
     }
 

@@ -31,6 +31,7 @@
     },
     methods: {
       submit() {
+        NProgress.start();
         console.log(this.value);
         axios.post('api/discussions', {
           title : this.title,
@@ -41,6 +42,7 @@
             if(response.data.code == 20000) {
               this.$router.push('/forum');
             }
+            NProgress.done();
         })
       },
 

@@ -41,12 +41,14 @@
 <script>
 export default {
   created() {
+    NProgress.start();
     axios.get('api/activities')
       .then(res => {
         // console.log(res.data);
         this.activities = res.data.data.data;
         this.total = res.data.data.total;
         this.page_size = res.data.data.per_page;
+        NProgress.done();
       })
   },
   data() {
@@ -78,9 +80,9 @@ export default {
             axios.post('api/activities/' + id + '/user')
               .then(res => {
                 // console.log(res.data);
-                if(res.data.code != 20000) {
+                if (res.data.code != 20000) {
                   swal("失败", "你已经报名过了！", "error");
-                }else {
+                } else {
                   swal("成功！", "你已经报名成功了。", "success");
                 }
               })
@@ -89,6 +91,7 @@ export default {
       }
     },
     handleCurrentChange(val) {
+      NProgress.start();
       axios.get('api/activities?page=' + val)
         .then(response => {
           //            this.activities = null;
@@ -99,6 +102,7 @@ export default {
             this.activities.push(k[i]);
             i++;
           }
+          NProgress.done();
         })
     }
   }

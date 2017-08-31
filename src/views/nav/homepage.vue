@@ -110,6 +110,7 @@
 export default {
   name: 'hello',
   mounted() {
+    NProgress.start();
     let token = localStorage.getItem('token');
     if (token != null) {
       this.noUser = false;
@@ -118,6 +119,7 @@ export default {
       if (this.user.role == "admin") this.admin = true;
       console.log(this.user);
     }
+    NProgress.done();
   },
   methods: {
     logout: function() {

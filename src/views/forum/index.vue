@@ -38,7 +38,7 @@
           <div class="panel-body">
             <div class="media">
               <div class="media-left">
-                 <router-link :to="{path: '/user/' + discussion.user.id}">
+                <router-link :to="{path: '/user/' + discussion.user.id}">
                   <img class="media-object" :data-src="discussion.user.avatar" alt="64x64" style="width: 64px; height: 64px;" :src="discussion.user.avatar" data-holder-rendered="true">
                 </router-link>
               </div>
@@ -49,13 +49,13 @@
             </div>
           </div>
           <div class="panel-footer">
-              <div class="row">
-            <div class="pull-left" style="margin-left: 2%">
-               <router-link :to="{path: '/user/' + discussion.user.id}">{{discussion.user.name}}</router-link> 创建于 {{discussion.created_at}}&nbsp;&nbsp;评论数: {{discussion.comments_total}}
-            </div>
-            <div class="pull-right" style="margin-right: 2%" v-if="discussion.last_user != null">
-               <router-link :to="{path: '/user/' + discussion.user.id}">{{discussion.last_user.name}}</router-link> 最后回复于 {{discussion.updated_at}}
-            </div>
+            <div class="row">
+              <div class="pull-left" style="margin-left: 2%">
+                <router-link :to="{path: '/user/' + discussion.user.id}">{{discussion.user.name}}</router-link> 创建于 {{discussion.created_at}}&nbsp;&nbsp;评论数: {{discussion.comments_total}}
+              </div>
+              <div class="pull-right" style="margin-right: 2%" v-if="discussion.last_user != null">
+                <router-link :to="{path: '/user/' + discussion.user.id}">{{discussion.last_user.name}}</router-link> 最后回复于 {{discussion.updated_at}}
+              </div>
             </div>
           </div>
         </div>
@@ -115,6 +115,7 @@ export default {
       this.$router.push('/forum/create');
     },
     handleClick(tab, event) {
+      NProgress.start();
       //        console.log(tab.label, event);
       let ca = "";
       if (tab.label == "编程") ca = "code";
@@ -135,6 +136,7 @@ export default {
 
           this.loading2 = false;
           //                  console.log(this.discussions[2]);
+          NProgress.done();
         })
 
     },
@@ -143,6 +145,7 @@ export default {
     },
     handleCurrentChange(val) {
       this.loading2 = true;
+      NProgress.start();
       axios.get('api/discussions?page=' + val)
         .then(response => {
           this.discussions = null;
@@ -154,6 +157,7 @@ export default {
             i++;
           }
           this.loading2 = false;
+          NProgress.done();
         })
       console.log(`当前页: ${val}`);
     }
