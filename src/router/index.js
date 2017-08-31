@@ -20,6 +20,14 @@ export default new Router({
           component: require('@/views/home/home'),
         },
         {
+          path: 'user/forget',
+          component: require('@/views/user/forget'),
+        },
+        {
+          path: 'user/reset',
+          component: require('@/views/user/reset'),
+        },
+        {
           path: 'user/:id',
           component: require('@/views/user/index'),
         },
