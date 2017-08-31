@@ -2,9 +2,9 @@
   <div>
     <!--<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>-->
     <!--<script >hljs.initHighlightingOnLoad();</script>-->
-    <div class="container" style="margin-bottom: 5%">
+    <div class="container col-md-8 col-md-offset-2" style="margin-bottom: 5%">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
           <div class="container">
             <div class="media  col-md-6 col-md-offset-2">
               <h2 class="">{{discussion.title}}</h2>

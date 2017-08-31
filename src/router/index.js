@@ -60,6 +60,10 @@ export default new Router({
           component: require('@/views/activities/detail'),
         },
         {
+          path: 'group',
+          component: require('@/views/group/index'),
+        },
+        {
           path: 'login',
           component: require('@/views/user/login'),
         },

@@ -38,9 +38,9 @@
           <div class="panel-body">
             <div class="media">
               <div class="media-left">
-                <a href="#">
-                  <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNWUxMjJhZTM1NSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1ZTEyMmFlMzU1Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
-                </a>
+                 <router-link :to="{path: '/user/' + discussion.user.id}">
+                  <img class="media-object" :data-src="discussion.user.avatar" alt="64x64" style="width: 64px; height: 64px;" :src="discussion.user.avatar" data-holder-rendered="true">
+                </router-link>
               </div>
               <div class="media-body">
                 <!--{{discussion.body}}-->
@@ -51,10 +51,10 @@
           <div class="panel-footer">
               <div class="row">
             <div class="pull-left" style="margin-left: 2%">
-              <a href="#">{{discussion.user.name}}</a> 创建于 {{discussion.created_at}}&nbsp;&nbsp;评论数: {{discussion.comments_total}}
+               <router-link :to="{path: '/user/' + discussion.user.id}">{{discussion.user.name}}</router-link> 创建于 {{discussion.created_at}}&nbsp;&nbsp;评论数: {{discussion.comments_total}}
             </div>
             <div class="pull-right" style="margin-right: 2%" v-if="discussion.last_user != null">
-              <a href="#">{{discussion.last_user.name}}</a> 最后回复于 {{discussion.updated_at}}
+               <router-link :to="{path: '/user/' + discussion.user.id}">{{discussion.last_user.name}}</router-link> 最后回复于 {{discussion.updated_at}}
             </div>
             </div>
           </div>

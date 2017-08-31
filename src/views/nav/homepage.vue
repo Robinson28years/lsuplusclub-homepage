@@ -35,7 +35,7 @@
                       <router-link to="/library">图书馆</router-link>
                     </li>
                     <li>
-                      <router-link to="/4">兴趣小组</router-link>
+                      <router-link to="/group">兴趣小组</router-link>
                     </li>
                     <li>
                       <router-link to="/activities">活动</router-link>

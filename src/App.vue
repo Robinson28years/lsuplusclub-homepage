@@ -19,4 +19,7 @@ export default {
     max-width: 100% !important;
     height: auto !important;
   }
+  body {
+        overflow-y: scroll;
+    }
 </style>
