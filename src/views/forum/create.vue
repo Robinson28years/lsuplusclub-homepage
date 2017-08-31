@@ -32,13 +32,13 @@
     methods: {
       submit() {
         console.log(this.value);
-        axios.post('api/topics', {
+        axios.post('api/discussions', {
           title : this.title,
           categories : this.value2,
           body : this.value,
         }).then(response => {
 //          console.log(response.data);
-            if(response.data.result == "success") {
+            if(response.data.code == 20000) {
               this.$router.push('/forum');
             }
         })

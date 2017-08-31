@@ -87,17 +87,17 @@
     },
     created() {
       NProgress.start();
-      axios.get('/api/topics')
+      axios.get('/api/discussions')
         .then(response => {
-//                  console.log(response.data)
-          let k = response.data.data;
+//                  console.log(response.data.data)
+          let k = response.data.data.data;
           let i = 0;
           while (k[i] != null) {
             this.discussions.push(k[i]);
             i++;
           }
-          this.total = response.data.total;
-          this.page_size = response.data.per_page;
+          this.total = response.data.data.total;
+          this.page_size = response.data.data.per_page;
 
           this.loading2 = false;
           NProgress.done();
@@ -125,17 +125,17 @@
         else if (tab.label == "日常") ca = "daily";
         this.loading2 = true;
         this.discussions = [];
-        axios.get('/api/topics?categories='+ ca)
+        axios.get('/api/discussions?categories='+ ca)
           .then(response => {
-//                  console.log(response.data)
-            let k = response.data.data;
+//                  console.log(response.data.data)
+            let k = response.data.data.data;
             let i = 0;
             while (k[i] != null) {
               this.discussions.push(k[i]);
               i++;
             }
-            this.total = response.data.total;
-            this.page_size = response.data.per_page;
+            this.total = response.data.data.total;
+            this.page_size = response.data.data.per_page;
 
             this.loading2 = false;
 //                  console.log(this.discussions[2]);
@@ -147,11 +147,11 @@
       },
       handleCurrentChange(val) {
         this.loading2 = true;
-        axios.get('api/topics?page=' + val)
+        axios.get('api/discussions?page=' + val)
           .then(response => {
             this.discussions = null;
             this.discussions = [];
-            let k = response.data.data;
+            let k = response.data.data.data;
             let i = 0;
             while (k[i] != null) {
               this.discussions.push(k[i]);
