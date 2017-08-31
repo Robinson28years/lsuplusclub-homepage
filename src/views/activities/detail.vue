@@ -22,7 +22,7 @@
     mounted() {
       axios.get('/api/activities/' + this.$route.params.id)
         .then(res => {
-          this.activity = res.data;
+          this.activity = res.data.data;
         })
     },
     data() {

@@ -43,10 +43,10 @@ export default {
   created() {
     axios.get('api/activities')
       .then(res => {
-        console.log(res.data);
-        this.activities = res.data.data;
-        this.total = res.data.total;
-        this.page_size = res.data.per_page;
+        // console.log(res.data);
+        this.activities = res.data.data.data;
+        this.total = res.data.data.total;
+        this.page_size = res.data.data.per_page;
       })
   },
   data() {
@@ -77,16 +77,13 @@ export default {
           function() {
             axios.post('api/activities/' + id + '/user')
               .then(res => {
-                console.log(res.data);
-                flag = true;
-                swal("成功！", "你已经报名成功了。", "success");
+                // console.log(res.data);
+                if(res.data.code != 20000) {
+                  swal("失败", "你已经报名过了！", "error");
+                }else {
+                  swal("成功！", "你已经报名成功了。", "success");
+                }
               })
-              .catch(error => {
-                swal("失败", "你已经报名过了！", "error");
-
-                console.log(error.response.data)
-              });
-
           });
 
       }
@@ -96,7 +93,7 @@ export default {
         .then(response => {
           //            this.activities = null;
           this.activities = [];
-          let k = response.data.data;
+          let k = response.data.data.data;
           let i = 0;
           while (k[i] != null) {
             this.activities.push(k[i]);
