@@ -42,39 +42,36 @@ export default {
   data() {
     return {
       form: {
-        email: '',
-        code: '',
+        password: '',
         newpassword: '',
+        checkpassword: '',
       }
     }
 
   },
   methods: {
-    submitCode() {
-      axios.post('api/user/code', {
-        email: this.form.email,
-      }).then(res => {
-        console.log(res.data);
-      })
-    },
     submitForm(form) {
-      axios.post('api/user/forget', this.form)
-        .then(res => {
-          if (res.data.code != 20000) {
-            this.$notify.error({
-              title: '错误',
-              message: res.data.error
-            });
-          }
-          else {
-            this.$notify({
-              title: '成功',
-              message: '修改密码成功',
-              type: 'success'
-            });
-            this.$router.push('login');
-          }
-        })
+      if (this.form.newpassword != this.form.checkpassword) {
+        this.$message.error("两次输入密码不一样");
+      } else {
+        axios.post('api/user/reset', this.form)
+          .then(res => {
+            if (res.data.code != 20000) {
+              this.$notify.error({
+                title: '错误',
+                message: res.data.error
+              });
+            }
+            else {
+              this.$notify({
+                title: '成功',
+                message: '修改密码成功',
+                type: 'success'
+              });
+              this.$router.push('/home');
+            }
+          })
+      }
     }
   }
 }
@@ -101,6 +98,7 @@ canvas {
 
 
 
+
 /* ---- particles.js container ---- */
 
 #particles-js {
@@ -116,6 +114,7 @@ canvas {
   background-size: cover;
   background-position: 50% 50%;
 }
+
 
 
 

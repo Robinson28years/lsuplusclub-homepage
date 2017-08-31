@@ -6,6 +6,7 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import 'nprogress/nprogress.css'
+import { Message } from 'element-ui';
 // import 'vuetify/dist/vuetify.min.css'
 // import Vuetify from 'vuetify'
 //

@@ -71,7 +71,7 @@
                             <router-link to="/user/reset">修改密码</router-link>
                           </li>
                           <li>
-                            <a href="#">修改头像</a>
+                              <router-link to="/user/avatar">修改头像</router-link>
                           </li>
 
                           <!--@if (Auth::user()->admin==1)-->
