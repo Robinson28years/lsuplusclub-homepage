@@ -1,13 +1,29 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+const nav_homepage = () => import('@/views/nav/homepage')
+const home = () => import('@/views/home/home')
+const user_avatar = () => import('@/views/user/avatar')
+const user_forget = () => import('@/views/user/forget')
+const user_reset = () => import('@/views/user/reset')
+const user_index = () => import('@/views/user/index')
+const forum_index = () => import('@/views/forum/index')
+const forum_create = () => import('@/views/forum/create')
+const forum_detail = () => import('@/views/forum/forum_detail')
+const library_index = () => import('@/views/library/index')
+const activities_index = () => import('@/views/activities/index')
+const activities_detail = () => import('@/views/activities/detail')
+const group_index = () => import('@/views/group/index')
+const user_login = () => import('@/views/user/login')
+const user_register = () => import('@/views/user/register')
+
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      component: require('@/views/nav/homepage'),
+      component: nav_homepage,
       beforeEnter: TestUser,
       children: [
         {
@@ -17,59 +33,59 @@ export default new Router({
         {
           path: 'home',
           // beforeEnter: LoginCheck,
-          component: require('@/views/home/home'),
+          component: home,
         },
         {
           path: 'user/avatar',
-          component: require('@/views/user/avatar'),
+          component: user_avatar,
         },
         {
           path: 'user/forget',
-          component: require('@/views/user/forget'),
+          component: user_forget,
         },
         {
           path: 'user/reset',
-          component: require('@/views/user/reset'),
+          component: user_reset,
         },
         {
           path: 'user/:id',
-          component: require('@/views/user/index'),
+          component: user_index,
         },
         {
           path: 'forum',
-          component: require('@/views/forum/index'),
+          component: forum_index,
         },
         {
           path: 'forum/create',
-          component: require('@/views/forum/create'),
+          component: forum_create,
         },
         {
           path: 'forum/:id',
-          component: require('@/views/forum/forum_detail'),
+          component: forum_detail,
         },
         {
           path: 'library',
-          component: require('@/views/library/index'),
+          component: library_index,
         },
         {
           path: 'activities',
-          component: require('@/views/activities/index'),
+          component: activities_index,
         },
         {
           path: 'activities/:id',
-          component: require('@/views/activities/detail'),
+          component: activities_detail,
         },
         {
           path: 'group',
-          component: require('@/views/group/index'),
+          component: group_index,
         },
         {
           path: 'login',
-          component: require('@/views/user/login'),
+          component: user_login,
         },
         {
           path: 'register',
-          component: require('@/views/user/register'),
+          component: user_register,
         }
       ]
     }
