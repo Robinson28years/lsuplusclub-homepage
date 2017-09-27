@@ -19,7 +19,7 @@
                   </button>
                   <a class="navbar-brand" href="index.html">
                     <!--<h2>LSU·Plus</h2>-->
-                    <img src="../../assets/pluss.png" height="60" width="60" alt="Logo">
+                    <img src="https://i.loli.net/2017/09/27/59cb506de17bf.png" height="60" width="60" alt="Logo">
                   </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->

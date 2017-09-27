@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Slider Start -->
-    <section id="slider">
+    <section id="slider" v-lazy:background-image="largeImg">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-2">
@@ -29,7 +29,8 @@
           <!-- .col-md-7 close -->
           <div class="col-md-5 col-sm-12">
             <div class="block">
-              <img src="https://i.loli.net/2017/08/16/599460fd9a603.gif" alt="Img">
+              <img v-lazy="homeImg"/>
+              <!-- <img src="https://i.loli.net/2017/08/16/599460fd9a603.gif" alt="Img"> -->
             </div>
           </div>
           <!-- .col-md-5 close -->
@@ -37,7 +38,7 @@
       </div>
     </section>
 
-    <section id="feature">
+    <section id="feature" v-lazy:background-image="featureImg">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-6">
@@ -60,7 +61,7 @@
       </div>
     </section>
     <!-- Call to action Start -->
-    <section id="call-to-action">
+    <section id="call-to-action" v-lazy:background-image="actionImg">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -166,9 +167,18 @@
 
 <script>
 import Department from '@/views/home/department.vue'
+
 export default {
   components: {
     Department
+  },
+  data() {
+    return {
+      homeImg: 'https://i.loli.net/2017/08/16/599460fd9a603.gif',
+      largeImg: 'https://ooo.0o0.ooo/2017/08/16/5994466c52a2d.jpg',
+      featureImg: 'https://i.loli.net/2017/09/27/59cb5134dd719.jpg',
+      actionImg: 'https://i.loli.net/2017/09/27/59cb556a0a0d8.jpg'
+    }
   }
 }
 </script>
