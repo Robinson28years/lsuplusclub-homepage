@@ -13,6 +13,12 @@
         </div>
       </div>
     </section>
+
+        <div class="visible-xs-block container-fluid col-xs-offset-4" style="margin-top:5%">
+            <button class="btn btn-success"><router-link to="/login" style="color:white;">登录</router-link></button>
+            <button class="btn btn-warning"><router-link to="/register" style="color:white;">注册</router-link></button>
+        </div>
+
     <!-- Wrapper Start -->
     <section id="intro">
       <div class="container">
