@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- Slider Start -->
-    <section id="slider" v-lazy:background-image="largeImg">
+    <section id="slider">
+    <!-- <section id="slider" v-lazy:background-image="largeImg"> -->
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-2">
@@ -29,7 +30,7 @@
                 <h2>关于我们</h2>
                 <p>位于18B313的互联网+实践基地,用于开展项目实践，创新开发，并定期开展项目活动，能力竞赛。希望同学们积极参与，相互提高</p>
               </div>
-              <p>俱乐部在计算机系专业教师李庆华博士，李怀忠博士推动下，于2016年7月13日正式成立。本俱乐部旨在形成一个良好的计算机学习氛围，并依托于互联网+基地，开展项目实践。</p>
+              <p>俱乐部在计算机系专业教师李怀忠博士推动下，于2016年7月13日正式成立。本俱乐部旨在形成一个良好的计算机学习氛围，并依托于互联网+基地，开展项目实践。</p>
             </div>
           </div>
           <!-- .col-md-7 close -->
@@ -181,7 +182,7 @@ export default {
   data() {
     return {
       homeImg: 'https://i.loli.net/2017/08/16/599460fd9a603.gif',
-      largeImg: 'https://ooo.0o0.ooo/2017/08/16/5994466c52a2d.jpg',
+      largeImg: '../assets/back.jpg',
       featureImg: 'https://i.loli.net/2017/09/27/59cb5134dd719.jpg',
       actionImg: 'https://i.loli.net/2017/09/27/59cb556a0a0d8.jpg'
     }
