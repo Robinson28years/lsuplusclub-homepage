@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="index.html">
+                  <a class="navbar-brand" href="">
                     <!--<h2>LSU·Plus</h2>-->
                     <img src="https://i.loli.net/2017/09/27/59cb506de17bf.png" height="60" width="60" alt="Logo">
                   </a>
