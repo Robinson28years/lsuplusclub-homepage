@@ -100,15 +100,15 @@
                 <li>
                   <div class="block">
                     <i class="ion-ios-chatboxes-outline"></i>
-                    <h4 class="counter">365</h4>
-                    <span>成立</span>
+                    <h4 class="counter">{{establishTime}}</h4>
+                    <span>成立天数</span>
                   </div>
                 </li>
                 <li>
                   <div class="block">
                     <i class="ion-ios-glasses-outline"></i>
                     <h4 class="counter">132</h4>
-                    <span>成员</span>
+                    <span>成员人数</span>
                   </div>
                 </li>
                 <li>
@@ -134,7 +134,9 @@
               QQ群
             </h4>
             <!-- <div style="width=80px;height=80px;"> -->
+            <a href="https://jq.qq.com/?_wv=1027&k=5cHUkSa">
               <img src="http://ww2.sinaimg.cn/mw690/b8eae9cfgw1fax5ystr3wj20f00f0tat.jpg" style="width:300px;height:300px;" />
+            </a>
             <!-- </div> -->
           </div>
         </div>
@@ -184,7 +186,21 @@ export default {
       homeImg: 'https://i.loli.net/2017/08/16/599460fd9a603.gif',
       largeImg: '../assets/back.jpg',
       featureImg: 'https://i.loli.net/2017/09/27/59cb5134dd719.jpg',
-      actionImg: 'https://i.loli.net/2017/09/27/59cb556a0a0d8.jpg'
+      actionImg: 'https://i.loli.net/2017/09/27/59cb556a0a0d8.jpg',
+      setUpTime: '2016-07-13',
+      establishTime: 0
+    }
+  },
+  created() {
+    this.getTime();
+  },
+  methods: {
+    getTime() {
+      var establish = new Date(this.setUpTime.replace(/-/g, "/"));
+      var current = new Date();
+      var time = current.getTime() - establish.getTime();
+      var days = parseInt(time / (1000 * 60 * 60 * 24));
+      this.establishTime = days;
     }
   }
 }
