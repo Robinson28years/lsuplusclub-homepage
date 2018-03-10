@@ -101,8 +101,6 @@ function LoginCheck(to, from, next) {
 }
 
 function TestUser(to, from, next) {
-  console.log("111111111111111111");
-  console.log(to);
   let token = localStorage.getItem('token');
   if (token != null) {
     axios.post('/api/refresh', {}).then(response => {
@@ -117,6 +115,5 @@ function TestUser(to, from, next) {
       localStorage.clear();
     });
   }
-  // console.log('1111');
   next();
 }
